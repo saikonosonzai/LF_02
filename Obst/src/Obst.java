@@ -8,6 +8,7 @@ public abstract class Obst {
     public Obst(String name) {
 
         this.name = name;
+
     }
 
     public String getName() {
@@ -43,5 +44,15 @@ public abstract class Obst {
     public void setReif(boolean reif) {
 
         this.reif = reif;
+    }
+
+
+    public String toString(){
+        String text = "";
+        text += "\nName: "+ getName();
+        text += "\nFarbe: " + getFarbe();
+        text += "\nGewicht: "+ getGewicht();
+        text += "\nreif: "+ isReif();
+        return text;
     }
 }
