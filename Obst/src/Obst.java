@@ -5,7 +5,7 @@ public abstract class Obst {
     private double gewicht;
     private boolean reif;
 
-    public Obst(String name){
+    public Obst(String name) {
 
         this.name = name;
     }

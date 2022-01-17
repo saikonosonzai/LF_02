@@ -1,18 +1,18 @@
-public class Banane extends Obst{
+public class Banane extends Obst {
 
     private double kruemmung;
 
-    public Banane(){
+    public Banane() {
 
         super("Banane");
     }
 
-    public double getKruemmung(){
+    public double getKruemmung() {
 
         return kruemmung;
     }
 
-    public void setKruemmung(double kruemmung){
+    public void setKruemmung(double kruemmung) {
 
         this.kruemmung = kruemmung;
     }
