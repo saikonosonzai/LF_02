@@ -12,16 +12,24 @@ public class Programm {
 
         System.out.println("=============");
 
-        Obst apfel = new Apfel();
-        
+        Apfel apfel = new Apfel();
+
+
+        apfel.setWurm(true);
         apfel.setFarbe("Rot");
         apfel.setGewicht(250);
         apfel.setReif(true);
 
         System.out.println(apfel);
 
+        System.out.println("=============");
 
-
+        Kirsche kirsche = new Kirsche();
+        kirsche.setFarbe("Rot");
+        kirsche.setGewicht(20);
+        kirsche.setReif(true);
+        kirsche.setKerne(true);
+        System.out.println(kirsche);
 
     }
 }

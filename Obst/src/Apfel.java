@@ -8,16 +8,16 @@ public class Apfel extends Obst {
     }
 
     public String toString() {
-        return super.toString() + "\nWurm: " + getWurm();
+        return super.toString() + "\nWurm: " + isWurm();
+    }
+    public void setWurm(boolean wurm) {
+        this.wurm = wurm;
     }
 
-    public boolean getWurm() {
+    public boolean isWurm() {
 
         return wurm;
     }
 
-    public void setWurm(boolean wurm) {
 
-        this.wurm = wurm;
-    }
 }

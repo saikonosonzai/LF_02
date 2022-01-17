@@ -8,10 +8,10 @@ public class Kirsche extends Obst {
 
     }
     public String toString() {
-        return super.toString() + "\nKerne: " + getKerne();
+        return super.toString() + "\nKerne: " + isKerne();
     }
 
-    public boolean getKerne() {
+    public boolean isKerne() {
 
         return kerne;
     }
