@@ -4,6 +4,7 @@ public abstract class Obst {
     private String farbe;
     private double gewicht;
     private boolean reif;
+    private String geschmack;
 
     public Obst(String name) {
 
@@ -46,13 +47,21 @@ public abstract class Obst {
         this.reif = reif;
     }
 
+    public String getGeschmack() {
+        return geschmack;
+    }
+
+    public void setGeschmack(String geschmack) {
+        this.geschmack = geschmack;
+    }
 
     public String toString(){
         String text = "";
         text += "\nName: "+ getName();
         text += "\nFarbe: " + getFarbe();
-        text += "\nGewicht: "+ getGewicht();
+        text += "\nGewicht: "+ getGewicht()+"g";
         text += "\nreif: "+ isReif();
+        text += "\nGeschmack: "+getGeschmack();
         return text;
     }
 }
