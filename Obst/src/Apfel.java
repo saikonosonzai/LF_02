@@ -10,6 +10,7 @@ public class Apfel extends Obst {
     public String toString() {
         return super.toString() + "\nWurm: " + isWurm();
     }
+
     public void setWurm(boolean wurm) {
         this.wurm = wurm;
     }
