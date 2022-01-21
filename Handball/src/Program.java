@@ -31,7 +31,8 @@ public class Program {
 
         Torwart torwart1 = new Torwart("Klaus",30,6,7,9);
         ArrayList spielerGast = new ArrayList();
-        spielerHeim.add(spieler1);
+        spielerGast.add(spieler1);
+
         Mannschaft gast = new Mannschaft("Gast",trainer1,torwart1,spielerGast);
         Ergebnis ergebnis = new Ergebnis();
         Spiel spiel = new Spiel(ergebnis,gast,heim);
