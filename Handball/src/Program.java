@@ -17,7 +17,7 @@ public class Program {
         Spieler spieler = new Spieler("Hannes", 25, 3, 8, 6, 2);
 
         Torwart torwart = new Torwart("Klaus",30,6,7,9);
-        ArrayList spielerHeim = new ArrayList();
+        ArrayList<Spieler> spielerHeim = new ArrayList<>();
         spielerHeim.add(spieler);
         Mannschaft heim = new Mannschaft("Heim",trainer,torwart,spielerHeim);
 
@@ -30,12 +30,12 @@ public class Program {
         Spieler spieler1 = new Spieler("Hannes", 25, 3, 8, 6, 2);
 
         Torwart torwart1 = new Torwart("Klaus",30,6,7,9);
-        ArrayList spielerGast = new ArrayList();
+        ArrayList<Spieler> spielerGast = new ArrayList<>();
         spielerGast.add(spieler1);
 
         Mannschaft gast = new Mannschaft("Gast",trainer1,torwart1,spielerGast);
         Ergebnis ergebnis = new Ergebnis();
         Spiel spiel = new Spiel(ergebnis,gast,heim);
-        spiel.toString();
+        System.out.println(spiel);
     }
 }

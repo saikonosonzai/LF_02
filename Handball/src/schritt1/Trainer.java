@@ -14,9 +14,7 @@ public class Trainer extends Person {
 
     @Override
     public String toString() {
-        return "\nTrainer: " + getName()
-                + "\nAlter: " + getAlter()
-                + "\nErfahrung: " + getErfahrung();
+        return super.toString() + "\nErfahrung: " + getErfahrung();
     }
 
     //getter

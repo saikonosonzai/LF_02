@@ -30,11 +30,7 @@ public class Spiel {
 
     @Override
     public String toString() {
-        return "Spiel{" +
-                "ergebnis=" + ergebnis +
-                ", gast=" + gast +
-                ", heim=" + heim +
-                ", spielverlauf=" + spielverlauf +
-                '}';
+        return "\nergebnis: " + getErgebnis() +
+                "\nspielverlauf: " + getSpielverlauf();
     }
 }

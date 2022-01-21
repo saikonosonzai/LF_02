@@ -21,9 +21,7 @@ public class Spieler extends Person {
 
     @Override
     public String toString() {
-        return "\nSpielername: " + getName()
-                + "\nalter: " + getAlter()
-                + "\ntore: " + getTore()
+        return super.toString() + "\ntore: " + getTore()
                 + "\nstaerke: " + getStaerke()
                 + "\ntorschuss: " + getTorschuss()
                 + "\nmotivation: " + getMotivation();

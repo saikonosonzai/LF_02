@@ -9,6 +9,12 @@ public abstract class  Person{
         this.name = name;
     }
 
+    @Override
+    public String toString() {
+        return "\nSpielername: " + getName()
+                + "\nalter: " + getAlter();
+    }
+
     public int getAlter() {
         return alter;
     }
