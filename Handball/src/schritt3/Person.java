@@ -11,7 +11,7 @@ public abstract class  Person{
 
     @Override
     public String toString() {
-        return "\nSpielername: " + getName()
+        return "\n\nSpielername: " + getName()
                 + "\nalter: " + getAlter();
     }
 

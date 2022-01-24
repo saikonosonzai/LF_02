@@ -6,8 +6,8 @@ public class Ergebnis {
 
     @Override
     public String toString() {
-        return "\ntrefferHeim: " + trefferHeim +
-                "\ntrefferGast: " + trefferGast;
+        return "\ntrefferHeim: " + getTrefferHeim() +
+                "\ntrefferGast: " + getTrefferGast();
     }
 
     public int getTrefferGast() {
@@ -25,5 +25,4 @@ public class Ergebnis {
     public void TrefferHeim() {
         trefferHeim++;
     }
-
 }

@@ -18,7 +18,7 @@ public class Spiel {
 
     public Mannschaft getGast() {
         return gast;
-    }
+}
 
     public Mannschaft getHeim() {
         return heim;
@@ -30,7 +30,7 @@ public class Spiel {
 
     @Override
     public String toString() {
-        return "\nergebnis: " + getErgebnis() +
+        return  "\nergebnis: " + getErgebnis() +
                 "\nspielverlauf: " + getSpielverlauf();
     }
 }
