@@ -19,11 +19,12 @@ public class Mannschaft {
         return "\n\nname: " + name +
                 "\n\ntrainer: " + trainer +
                 "\n\ntorwart: " + torwart +
+                "\n\nSpieler: " + spielerListe +
                 "\n\nmotivation: " + motivation +
                 "\n\nstaerke: " + staerke;
     }
 
-    public Mannschaft(String name, Trainer trainer, Torwart torwart, ArrayList spielerListe){
+    public Mannschaft(String name, Trainer trainer, Torwart torwart, ArrayList<Spieler> spielerListe){
         this.name = name;
         this.trainer = trainer;
         this.torwart = torwart;
@@ -37,8 +38,8 @@ public class Mannschaft {
         }
 
         motivation += torwart.getMotivation();
-        int motivationDurchschnitt = motivation/(spielerListe.size() + 1);
-        return motivationDurchschnitt;
+        motivation = motivation/(spielerListe.size() + 1);
+        return motivation;
     }
 
     public int getStaerke(){
@@ -48,8 +49,8 @@ public class Mannschaft {
         }
 
         staerke += torwart.getStaerke();
-        int staerkeDurschnitt = staerke/(spielerListe.size() + 1);
-        return staerkeDurschnitt;
+        staerke = staerke/(spielerListe.size() + 1);
+        return staerke;
     }
 
     public String getName() {

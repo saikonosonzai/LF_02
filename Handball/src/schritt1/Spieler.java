@@ -36,8 +36,6 @@ public class Spieler extends Person {
         return tore;
     }
 
-
-
     public int getStaerke() {
         return staerke;
     }
