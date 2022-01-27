@@ -20,8 +20,8 @@ public class Mannschaft {
                 "\n\ntrainer: " + trainer +
                 "\n\ntorwart: " + torwart +
                 "\n\nSpieler: " + spielerListe +
-                "\n\nmotivation: " + motivation +
-                "\n\nstaerke: " + staerke;
+                "\n\nmotivation: " + getMotivation() +
+                "\n\nstaerke: " + getStaerke();
     }
 
     public Mannschaft(String name, Trainer trainer, Torwart torwart, ArrayList<Spieler> spielerListe){

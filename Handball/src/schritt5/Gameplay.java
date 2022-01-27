@@ -1,7 +1,9 @@
 package schritt5;
 
 import schritt1.Spieler;
+import schritt1.Trainer;
 import schritt2.Torwart;
+import schritt4.Ergebnis;
 import schritt4.Mannschaft;
 import schritt4.Spiel;
 
@@ -15,7 +17,8 @@ public class Gameplay {
     private static final int naechsteAktion = 10;
 
     private static int ermittelMannschaftsWert(Mannschaft mannschaft){
-       int mannschaftsWert =  mannschaft.getMotivation() * mannschaft.getStaerke();
+        Trainer trainer = mannschaft.getTrainer();
+       int mannschaftsWert =  mannschaft.getMotivation() * mannschaft.getStaerke() * trainer.getErfahrung();
        if (mannschaftsWert == 0){
            mannschaftsWert = 1;
        }
@@ -48,7 +51,7 @@ public class Gameplay {
     public static void spielen(Spiel spiel){
         Random r = new Random();
         int zahl = r.nextInt(nachSpielZeit);
-        int spieldauaer = spielzeit + zahl;
+        int spielZeit = spielzeit + zahl;
 
 
         Mannschaft heim = spiel.getHeim();
@@ -56,22 +59,36 @@ public class Gameplay {
        Mannschaft gast = spiel.getGast();
        int mannschaftsWertGast = ermittelMannschaftsWert(gast);
 
+       for (int i = 0; i < spielZeit; i++){
        int summe = mannschaftsWertGast + mannschaftsWertHeim;
+
+
        int zufall = r.nextInt(summe);
-       
        if (zufall > mannschaftsWertHeim){
           ArrayList<Spieler> gast_ = gast.getSpielerListe();
           zufall = r.nextInt(gast_.size());
           Spieler schuetze = gast_.get(zufall);
           Torwart torwart = heim.getTorwart();
-          erzieltTor(schuetze,torwart);
+          boolean tor = erzieltTor(schuetze,torwart);
+          if (tor) {
+              Ergebnis ergebnis = spiel.getErgebnis();
+              ergebnis.TrefferGast();
+          }
 
-       }else{
+       }else {
            ArrayList<Spieler> heim_ = heim.getSpielerListe();
            zufall = r.nextInt(heim_.size());
            Spieler schuetze = heim_.get(zufall);
            Torwart torwart = gast.getTorwart();
-           erzieltTor(schuetze,torwart);
+           erzieltTor(schuetze, torwart);
+
+           boolean tor = erzieltTor(schuetze,torwart);
+           if (tor) {
+               Ergebnis ergebnis = spiel.getErgebnis();
+               ergebnis.TrefferHeim();
+           }
+
+       }
        }
     }
 

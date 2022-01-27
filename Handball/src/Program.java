@@ -4,6 +4,7 @@ import schritt2.Torwart;
 import schritt4.Ergebnis;
 import schritt4.Mannschaft;
 import schritt4.Spiel;
+import schritt5.Gameplay;
 
 import java.util.ArrayList;
 
@@ -11,10 +12,17 @@ public class Program {
     public static void main(String[] args) {
         ArrayList<Spieler> spielerGast = new ArrayList<>();
         ArrayList<Spieler> spielerHeim = new ArrayList<>();
+        Gameplay gameplay = new Gameplay();
 
         Trainer trainer = new Trainer("Hans", 30, 7);
 
-        Spieler spieler = new Spieler("Hannes", 25, 3, 8, 6, 2);
+        Spieler spieler = new Spieler("Hannes", 25, 3, 4, 6, 2);
+        spielerHeim.add(spieler);
+
+        spieler = new Spieler("Hannes", 25, 3, 2, 9, 5);
+        spielerHeim.add(spieler);
+
+        spieler = new Spieler("Hannes", 25, 3, 5, 1, 10);
         spielerHeim.add(spieler);
 
         Torwart torwart = new Torwart("Klaus",30,6,7,9);
@@ -27,10 +35,16 @@ public class Program {
 
         Trainer trainer1 = new Trainer("Paul", 1000, 10);
 
-        Spieler spieler1 = new Spieler("tvglu", 3, 5, 1, 1, 1);
-        spielerGast.add(spieler1);
+        Spieler spieler1 = new Spieler("Hannes", 25, 3, 7, 6, 2);
+        spielerHeim.add(spieler1);
 
-        Torwart torwart1 = new Torwart("z8fu",80,6,7,9);
+        spieler1 = new Spieler("Hannes", 25, 3, 2, 1, 5);
+        spielerHeim.add(spieler1);
+
+        spieler1 = new Spieler("Hannes", 25, 3, 1, 1, 5);
+        spielerHeim.add(spieler1);
+
+        Torwart torwart1 = new Torwart("z8fu",80,6,4,1);
         spielerGast.add(spieler1);
 
         Mannschaft gast = new Mannschaft("Gast",trainer1,torwart1,spielerGast);
@@ -38,11 +52,9 @@ public class Program {
         System.out.println(gast);
 
         Ergebnis ergebnis = new Ergebnis();
-
-        ergebnis.TrefferGast();
-
         Spiel spiel = new Spiel(ergebnis,gast,heim);
-
+            gameplay.spielen(spiel);
         System.out.println(spiel);
+
     }
 }
