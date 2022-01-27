@@ -25,7 +25,7 @@ public class Program {
         spieler = new Spieler("Hannes", 25, 3, 5, 1, 10);
         spielerHeim.add(spieler);
 
-        Torwart torwart = new Torwart("Klaus",30,6,7,4);
+        Torwart torwart = new Torwart("Klaus",30,6,7,9);
 
         Mannschaft heim = new Mannschaft("Heim",trainer,torwart,spielerHeim);
 
@@ -38,13 +38,13 @@ public class Program {
         Spieler spieler1 = new Spieler("Hannes", 25, 3, 7, 6, 2);
         spielerHeim.add(spieler1);
 
-        spieler1 = new Spieler("Hannes", 25, 3, 2, 1, 5);
+        spieler1 = new Spieler("Hannes", 25, 3, 2, 4, 5);
         spielerHeim.add(spieler1);
 
-        spieler1 = new Spieler("Hannes", 25, 3, 1, 1, 5);
+        spieler1 = new Spieler("Hannes", 25, 3, 1, 7, 5);
         spielerHeim.add(spieler1);
 
-        Torwart torwart1 = new Torwart("z8fu",80,6,4,5);
+        Torwart torwart1 = new Torwart("z8fu",80,6,4,6);
         spielerGast.add(spieler1);
 
         Mannschaft gast = new Mannschaft("Gast",trainer1,torwart1,spielerGast);
