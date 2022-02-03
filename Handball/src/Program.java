@@ -53,7 +53,7 @@ public class Program {
 
         Ergebnis ergebnis = new Ergebnis();
         Spiel spiel = new Spiel(ergebnis,gast,heim);
-            gameplay.spielen(spiel);
+            Gameplay.spielen(spiel);
         System.out.println(spiel);
 
     }
