@@ -14,7 +14,7 @@ public class Ergebnis {
         return trefferGast;
     }
 
-    public void TrefferGast() {
+    public void addToreGast() {
         trefferGast++;
     }
 
@@ -22,7 +22,7 @@ public class Ergebnis {
         return trefferHeim;
     }
 
-    public void TrefferHeim() {
+    public void addToreHeim() {
         trefferHeim++;
     }
 }

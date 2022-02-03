@@ -10,6 +10,7 @@ public class Spiel {
         this.ergebnis = ergebnis;
         this.gast = gast;
         this.heim = heim;
+        spielverlauf = new StringBuilder();
     }
 
     public Ergebnis getErgebnis() {
@@ -24,13 +25,13 @@ public class Spiel {
         return heim;
     }
 
-    public StringBuilder getSpielverlauf() {
+    public StringBuilder getSpielbericht() {
         return spielverlauf;
     }
 
     @Override
     public String toString() {
         return  "\nergebnis: " + getErgebnis() +
-                "\nspielverlauf: " + getSpielverlauf();
+                "\nspielverlauf: " + getSpielbericht();
     }
 }
