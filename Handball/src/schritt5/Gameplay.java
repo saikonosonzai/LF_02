@@ -38,11 +38,12 @@ public class Gameplay {
         int spielZeit = SPIELZEIT + zahl;
         int spielDauer = r.nextInt(MAX_DAUER_BIS_AKTION + 1);
 
-        if (brecheSpielAb()){
-            throw new SpielAbbruchException(spielZeit);
-        }
+
 
 do {
+    if (brecheSpielAb()){
+        throw new SpielAbbruchException(spielDauer);
+    }
     int wertHeim = ermittelMannschaftsWert(spiel.getHeim());
     int wertGast = ermittelMannschaftsWert(spiel.getGast());
     int summe = wertGast + wertHeim;

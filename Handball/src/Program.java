@@ -52,7 +52,6 @@ public class Program {
         System.out.println(gast);
         Ergebnis ergebnis = new Ergebnis();
         Spiel spiel = new Spiel(ergebnis,gast,heim);
-            Gameplay.spielen(spiel);
         try {
             Gameplay.spielen(spiel);
         } catch (SpielAbbruchException e)

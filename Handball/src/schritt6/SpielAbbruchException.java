@@ -15,7 +15,7 @@ public SpielAbbruchException(int spielDauer) {
 
     @Override
     public String getMessage(){
-    return "Spiel wird Abgebrochen";
+    return "Spiel wird Abgebrochen min: "+ getSpielDauer();
     }
 
 
