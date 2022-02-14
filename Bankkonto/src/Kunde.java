@@ -1,7 +1,7 @@
 public class Kunde extends Person {
     private Mitarbeiter mitarbeiter;
-    public Kunde(String name, Adresse adresse, Mitarbeiter mitarbeiter){
-        super(name, adresse);
+    public Kunde(String name, Mitarbeiter mitarbeiter){
+        super(name);
         this.mitarbeiter = mitarbeiter;
     }
 
