@@ -4,23 +4,22 @@ public class Kaufvertrag {
     private Ware ware;
     private String zahlungsModalitaeten;
 
-    public Kaufvertrag(Vertragspartner kaeufer, Vertragspartner verkaeufer, Ware ware, String zahlungsModalitaeten){
-        this.kaeufer = kaeufer;
+    public Kaufvertrag(Vertragspartner verkaeufer, Vertragspartner kaeufer, Ware ware){
         this.verkaeufer = verkaeufer;
+        this.kaeufer = kaeufer;
         this.ware = ware;
-        this.zahlungsModalitaeten = zahlungsModalitaeten;
     }
 
-    public String getZahlungsModalitaeten() {
-        return zahlungsModalitaeten;
+    public Vertragspartner getVerkaeufer() {
+        return verkaeufer;
     }
 
     public Vertragspartner getKaeufer() {
         return kaeufer;
     }
 
-    public Vertragspartner getVerkaeufer() {
-        return verkaeufer;
+    public void setKaeufer(Vertragspartner kaeufer) {
+        this.kaeufer = kaeufer;
     }
 
     public Ware getWare() {
@@ -31,12 +30,8 @@ public class Kaufvertrag {
         this.ware = ware;
     }
 
-    public void setVerkaeufer(Vertragspartner verkaeufer) {
-        this.verkaeufer = verkaeufer;
-    }
-
-    public void setKaeufer(Vertragspartner kaeufer) {
-        this.kaeufer = kaeufer;
+    public String getZahlungsModalitaeten() {
+        return zahlungsModalitaeten;
     }
 
     public void setZahlungsModalitaeten(String zahlungsModalitaeten) {
@@ -45,11 +40,9 @@ public class Kaufvertrag {
 
     @Override
     public String toString() {
-        return "Kaufvertrag{" +
-                "kaeufer=" + kaeufer +
-                ", verkaeufer=" + verkaeufer +
-                ", ware=" + ware +
-                ", zahlungsModalitaeten='" + zahlungsModalitaeten + '\'' +
-                '}';
+        return "Kaufvertrag:\n\nVerkäufer: "+getVerkaeufer()+
+                "\nKäufer: "+getKaeufer()+
+                "\nWare:\n"+getWare()+
+                "\nZahlungsart:"+getZahlungsModalitaeten();
     }
 }

@@ -42,8 +42,9 @@ public abstract class Konto {
                 return false;
             }
     }
-    public void einzahlen(double betrag){
+    public boolean einzahlen(double betrag){
         kontostand += betrag;
+        return true;
     }
     public void verzinsen(){
         kontostand += kontostand * zinssatz;
