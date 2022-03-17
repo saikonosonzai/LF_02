@@ -11,16 +11,42 @@ public class ProgrammReadCsv {
         Vertragspartner verkaeufer = null;
         Vertragspartner kaeufer = null;
 
+
+
         while ((zeile = br.readLine()) != null)
         {
+            String strasse = "";
+            String ort = "";
             String[] array = zeile.split(";");
             System.out.println(zeile);
-            System.out.println(array[0] + " | "+ array[1]+ " | "+ array[2]+ " | "+ array[3] +" | "+ array[4] + " | "+ array[5]);
-            if (Objects.equals(array[0], "Verkäufer")){
-                verkaeufer = new Vertragspartner(array[1], array[2]);
+            System.out.println();
+
+
+            String[] name = array[1].split(" ");
+
+            String[] erstes = array[2].split(" ");
+            for (int i = 0; i < erstes.length - 1; i++){
+                strasse += erstes[i] + " ";
             }
+            strasse = strasse.trim();
+
+            String[] zweites = array[3].split(" ");
+            for (int i = 1; i < zweites.length; i++){
+                ort = zweites[i] + " ";
+            }
+            ort = ort.trim();
+
+            if (Objects.equals(array[0], "Verkäufer")){
+                verkaeufer = new Vertragspartner(name[0], name[1]);
+                verkaeufer.setAdresse(new Adresse(strasse, erstes[erstes.length - 1], zweites[0], ort));
+                verkaeufer.setAusweisNr(array[3]);
+            }
+
+
             if (Objects.equals(array[0], "Käufer")){
-                kaeufer = new Vertragspartner(array[1], array[2]);
+                kaeufer = new Vertragspartner(name[0], name[1]);
+                kaeufer.setAdresse(new Adresse(strasse, erstes[erstes.length - 1], zweites[0], ort));
+                kaeufer.setAusweisNr(array[3]);
             }
         }
 

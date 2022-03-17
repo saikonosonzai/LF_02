@@ -15,23 +15,22 @@ public class ProgrammWriteCsv {
         String datei = "H:/Dokumente/Programmieren/PrintWriter/Kaufvertrag.csv";
         PrintWriter writer = new PrintWriter(datei);
         writer.print("Vertragspartner;");
-        writer.print("Vorname;");
-        writer.print("Nachname;");
-        writer.print("Straße;");
-        writer.print("PLZ;");
-        writer.println("Ort;");
+        writer.print("Vorname Nachname;");
+        writer.print("Straße HausNr;");
+        writer.print("PLZ Ort;");
+        writer.println("AusweisNr;");
+
         writer.print("Verkäufer;");
-        writer.print("Joachim;");
-        writer.print("Bredull;");
-        writer.print("Auch zu Hause;");
-        writer.print("28195;");
-        writer.println("Bremen;");
+        writer.print(vertrag.getVerkaeufer().getVorname()+" "+vertrag.getVerkaeufer().getNachname()+";");
+        writer.print(vertrag.getVerkaeufer().getAdresse().getStrasse() + " " + vertrag.getVerkaeufer().getAdresse().getHausNr() + ";"
+                + vertrag.getVerkaeufer().getAdresse().getPlz() + " " +  vertrag.getVerkaeufer().getAdresse().getOrt() +";");
+        writer.println(vertrag.getVerkaeufer().getAusweisNr()+";");
+
         writer.print("Käufer;");
-        writer.print("Klaus;");
-        writer.print("Brandt;");
-        writer.print("Zu Hause;");
-        writer.print("28199;");
-        writer.print("Bremen;");
+        writer.print(vertrag.getKaeufer().getVorname()+" "+vertrag.getVerkaeufer().getNachname()+";");
+        writer.print(vertrag.getKaeufer().getAdresse().getStrasse() + " " + vertrag.getKaeufer().getAdresse().getHausNr() + ";"
+                + vertrag.getKaeufer().getAdresse().getPlz() + " " +  vertrag.getKaeufer().getAdresse().getOrt() +";");
+        writer.println(vertrag.getKaeufer().getAusweisNr()+";");
         writer.close();
 
     }
