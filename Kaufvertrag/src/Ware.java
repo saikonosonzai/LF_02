@@ -1,3 +1,5 @@
+import com.itextpdf.layout.element.Cell;
+
 import java.util.ArrayList;
 
 public class Ware {
@@ -38,7 +40,21 @@ public class Ware {
         return maengel;
     }
 
+    public void setBesonderheiten(ArrayList<String> besonderheiten) {
+        this.besonderheiten = besonderheiten;
+    }
 
+    public void setMaengel(ArrayList<String> maengel) {
+        this.maengel = maengel;
+    }
+
+    public double getPreis() {
+        return preis;
+    }
+
+    public void setPreis(double preis) {
+        this.preis = preis;
+    }
 
     @Override
     public String toString() {
