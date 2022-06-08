@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:sqlite:H:\Dokumente\Programmieren\LF02\Kaufvertrag\src\data\Kaufvertrag.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="Games" uuid="4ba7f32b-bff4-4e02-9f07-f7d435bcc5ec">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:H:\Dokumente\Programmieren\LF02\Games\src\data\Games.db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

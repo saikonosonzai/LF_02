@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Bankkonto/Bankkonto.iml" filepath="$PROJECT_DIR$/Bankkonto/Bankkonto.iml" />
       <module fileurl="file://$PROJECT_DIR$/Datum/Datum.iml" filepath="$PROJECT_DIR$/Datum/Datum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Games/Games.iml" filepath="$PROJECT_DIR$/Games/Games.iml" />
       <module fileurl="file://$PROJECT_DIR$/Handball/Handball.iml" filepath="$PROJECT_DIR$/Handball/Handball.iml" />
       <module fileurl="file://$PROJECT_DIR$/Kaufvertrag/Kaufvertrag.iml" filepath="$PROJECT_DIR$/Kaufvertrag/Kaufvertrag.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/LF02.iml" filepath="$PROJECT_DIR$/.idea/LF02.iml" />
